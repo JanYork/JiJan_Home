@@ -1,0 +1,98 @@
+*{
+	margin:0px;
+	padding:0px; 
+}
+li{
+	list-style:none;
+}
+section{
+	width:1280px;
+	margin:0px auto;
+	font-size: 20px;
+}
+.fa{
+	position: fixed;
+	bottom: 50px;
+	left: 1450px;
+	width: 50px;
+}
+.rid{
+	border:1px solid #EEEEEE;
+}
+.rid:hover{
+	font-size:25px;
+}
+.picture{
+	width:1280px;
+}
+.fater{
+	width:1280px;
+	height:40px;
+	line-height:40px;
+	background-color:#575757;
+	color:white;
+}
+.Son li{
+	display:inline-block;
+}
+.sonty{
+	padding-left:100px;
+}
+.sont{
+	padding-left:150px;
+}
+.sont1{
+	padding-left:160px;
+}
+.sont2{
+	padding-left:200px;
+}
+.Song{
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	border-bottom:1px solid #EEEEEE;
+	margin-top:-10px;
+	
+}
+.Song li{
+	display:inline-block;
+	margin-left:20px;
+}
+.rid div{
+	display:inline-block;
+}
+.ridt-img,.rid2{
+	vertical-align:middle;
+}
+.Song2{
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	margin-left:20px;
+	margin-top:20px;
+	color:#888888;
+}
+.ridrea{
+	width:150px;
+	color:#B40027;
+}
+.ridre{
+	width:200px;
+	color:#888888;
+	padding-left:100px;
+}
+.ridret{
+	color:#888888;
+	padding-left:70px;
+}
+.means{
+	font-weight:bold;
+}
+.box{
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	background-color:
+}
+

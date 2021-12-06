@@ -1,0 +1,23 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+li{
+	list-style:none;
+}
+.middl{
+	width:1280px;
+	margin:0px auto;
+	margin-top:30px;
+}
+.tail{
+	font-weight:bold;
+}
+footer{
+	margin-top:25px;
+}
+.wang{
+	display:inline-block;
+	line-height:40px;
+	margin-left:50px;
+}

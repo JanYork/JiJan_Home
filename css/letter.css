@@ -1,0 +1,93 @@
+.letter{
+  width:700px;
+  margin:0 auto;
+}
+.content{
+	animation: lightletter 3s ease-in-out infinite;
+  width:91%;
+  text-align:center;
+  padding:20px 10px;
+  height:400px;
+  background:#fff;
+  border-top:10px solid #eee;
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.10);
+  margin: 0 auto;
+  margin-bottom:-60px;
+  /* 制作信封样式*/
+  border-image:repeating-linear-gradient(-45deg,transparent 0,transparent 1em,#ffc9c7 0,#ffc9c7 2em ,#dcedff 0,transparent 0,transparent 3em,#dcedff 0,#dcedff 4em) 20;
+}
+
+.cover .box1{
+  
+  position:relative;
+  margin-top:1px;
+   width:100%;
+  height:100px;
+/*    使用圆锥渐变制作特殊部分样式*/
+  background:conic-gradient(transparent 23% ,#fde5ca 0,#fde5ca 77%,transparent 0)
+  
+}
+
+/*  制作左边小三角*/
+.cover .box1::before{
+  
+   content:'';
+   position:absolute;
+   top:0px;
+   border-top:6px solid transparent;
+   border-bottom:3px solid transparent;
+   border-right:20px solid #d29d65;
+}
+
+/*  制作右边小三角*/
+.cover .box1::after{
+  
+   content:'';
+   position:absolute;
+   top:0px;
+   right:0px;
+   border-top:6px solid transparent;
+   border-bottom:3px solid transparent;
+   border-left:20px solid #d29d65;
+}
+.cover .box2{
+  width:100%;
+  height:100px;
+  background:linear-gradient(#fde5ca 3%,#f9cba3 100%);
+  border-radius:0 0 4% 4%;  
+}
+/* 信封logo大小样式 */
+.letterlogo{
+	width: 80px;
+	border-radius: 50%;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	}
+
+
+/* 信封周边渐变色边框效果开始 */
+@keyframes lightletter {
+    0% {
+    box-shadow: 0 0 16px #f00;
+    }
+    25% {
+    box-shadow: 0 0 32px #0f0;
+    }
+
+    50% {
+    box-shadow: 0 0 16px #0000FF;
+    }
+
+    75% {
+    box-shadow: 0 0 32px orange;
+    }
+
+    100% {
+    box-shadow: 0 0 16px darkviolet;
+    }
+}
+/* 信封周边渐变色边框效果结束 */
+.content h3{
+	/* 对于此样式，可以删除，不会影响布局 */
+	color: aqua;
+}

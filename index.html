@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+	<!-- 
+	* @Author: JanYork<747945307@qq.com>;
+	* @Version: 1.0.0;
+	* @time: 2021年11月30日10点46分;
+	* 图片粒子效果来源与互联网，版权源于 ©https://codepen.io/zadvorsky/pen/PNXbGo
+	* 网页Js背景效果来源于私人，版权源于 ©https://inis.cc
+	* 左下角Live2D效果来源于博客园用户，模型开源
+	* 鼠标点击效果源于互联网，无版权来源
+	-->
+	<head>
+		<meta charset="utf-8" />
+		<!-- 引入主页面CSS文件 -->
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<!--默认使用极速内核：针对国内浏览器产商-->
+		<meta name="renderer" content="webkit">
+		<!-- SEO关键词 -->
+		<meta name="keywords" content="云深团队,团队主页,云深,主页,团队页面">
+		<!-- SEO网页描述 -->
+		<meta name="description" content="云深团队主页是由HTML5与CSS3及少量JavaScript代码构成的无后台团队主页系统">
+		
+		<!--chrome Android 地址栏颜色-->
+		<meta name="theme-color" content="#3a3f51">
+		<!-- ico图标配置 -->
+		<link rel="icon" type="img/logo/ico" href="img/logo/favicon.ico">
+		<!-- 引入Live2D JavaScript文件 -->
+		<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+		<!-- 引入JavaScript live2D 形象位置配置文件 -->
+		<script src="js/live2D.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 引入JavaScript外部弹窗样式 -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+		<!-- 引入JQ库 -->
+		<script src="js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 引入主要JavaScript文件 -->
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 引入layui UI框架 -->
+		<script src="layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 引入JavaScript背景效果 -->
+		<script src="js/Js-body/b9.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 图片粒子效果外部库引入开始 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 图片粒子效果外部库引入结束 -->
+		
+		<!-- 引入伸缩栏效果 -->
+		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 引入伸缩栏样式 -->
+		<link rel="stylesheet" type="text/css" href="css/flexible.css"/>
+		<!-- 图片粒子效果内部JavaScript（用于定义图片等内容） -->
+		<script src="js/imgeffect.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 鼠标点击粒子效果引入 -->
+		<script src="js/Mouse.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 鼠标右键Js效果引入 -->
+		<script src="js/mouseright.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 页面音乐播放器CSS样式引入 -->
+		<link rel="stylesheet" type="text/css" href="css/aplayer.css"/>
+		
+		<!-- 页面音乐外部播放器Js库引入开始 -->
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script defer src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/kaygb/kaygb@master/layer/layer.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/kaygb/kaygb@master/js/v3.js"></script>
+		<!-- 页面音乐外部播放器Js库引入结束 -->
+		
+		<!-- 此处可修改标题 -->
+		<title>云深-不知处</title>
+	
+		<script src="js/noPaqu.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<header class="top_nav" style="cursor: url(cursors/normal.cur),auto;" >
+			<div id="toptop">
+			<h1><a style="cursor: url(cursors/link.cur),auto;" href="index.html">首页</a></h1>
+			<ul id="headerul">
+				<li><a style="cursor: url(cursors/link.cur),auto;" href="https://leetcode-cn.com/" target="myIfeame"><img src="img/ico/pen.gif" ></a></li>
+				<li><a style="cursor: url(cursors/link.cur),auto;" href="imgbook.html" target="myIfeame"><img src="img/ico/imgbook.gif" ></a></li>
+				<li><a style="cursor: url(cursors/link.cur),auto;" href="img.html" target="myIfeame"><img src="img/ico/system.gif" ></a></li>
+			</ul>
+			</div>
+		</header>
+		
+		<!-- 网页左侧主体部分开始 -->
+		<div id="centerbox" style="cursor: url(cursors/normal.cur),auto;">
+			
+			<div id="centerleft">
+				<!-- 左侧栏目头像盒子开始 -->
+				<div id="leftbox">
+					<div id="logobox">
+						<div id="logoone">
+							<a style="cursor: url(cursors/link.cur),auto;" href="GPL.html" id="logo"></a>
+						</div>
+						<h3 class="name"> <云深团队> </h3>
+					</div>
+					<p class="name2">云深不知之处<br>开发学成之时</p>
+				</div>
+				<!-- 左侧栏目头像盒子结束 -->
+					
+				<!-- 左侧边栏开始 -->
+				<aside>
+					<nav class="left_nav">
+						<a style="cursor: url(cursors/link.cur),auto;" href="https://blog.janyork.com/index.php/archives/21/">开发文档</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="https://github.com/JanYork" target="_blank">Github</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="https://www.kuaishou.com/" target="myIfeame">影视站点</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="mailto:747945307@qq.com">邮箱联系</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="tongzhi.html" target="myIfeame">官方消息</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="https://blog.csdn.net/qq_60750453?spm=1000.2115.3001.5343" target="myIfeame">编程资料</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="http://img.janyork.com/" target="myIfeame">开放图床</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="Course.html">开发历程</a>
+					</nav>
+				</aside>
+				<!-- 左侧边栏结束 -->
+			</div>
+			<!-- 网页左侧主体部分结束 -->
+			
+			<!-- 网页主体部分开始 -->
+			<div id="center">
+				<!-- 网页中心部分开始 -->
+				<div id="docbox">
+					<iframe src="site/baiduhome.html" scrolling : auto  height="100%" name="myIfeame" width="1026px" ></iframe>
+				</div>
+					
+				<!-- 网页中心部分结束 -->
+				
+				<!-- 网页右侧浮栏开始 -->
+				<div class="center-right">
+					<!-- 右侧浮栏上盒子 -->
+					<div id="box-contact">
+						<ul>
+							<li><a style="cursor: url(cursors/link.cur),auto;" id="contact-a1" href="https://jq.qq.com/?_wv=1027&k=NndVnNl3" target="_blank"><img src="img/ico/qq-fill.png" ></a></li>
+							<li><a style="cursor: url(cursors/link.cur),auto;" id="contact-a2" href="https://weibo.com/login.php" target="myIfeame"><img src="img/ico/iconfont-weibo.png"></a></li>
+							<li><a style="cursor: url(cursors/link.cur),auto;" id="contact-a3" href="http://www.twitter.com" target="_blank"><img src="img/ico/twitter.png" ></a></li>
+						</ul>
+						<ul>
+							<li><input style="cursor: url(cursors/link.cur),auto;"  id="contact-a4" onclick="prompt()" type="image" src="img/ico/iconfont-info.png" /></li>
+							<li><a style="cursor: url(cursors/link.cur),auto;"  id="contact-a5" href="https://github.com/JanYork/jan-home" target="_blank"><img src="img/ico/github-fill.png" ></a></li>
+							<li><a style="cursor: url(cursors/link.cur),auto;"  id="contact-a6" href="letter.html" target="myIfeame"><img src="img/ico/fuwu.png" ></a></li>
+						</ul>
+					</div>
+					<!-- 右侧浮栏上盒子结束 -->
+					
+					<!-- 右侧蓝白导航开始 -->
+					<ul class="right-li">
+						<li>
+							<div class="box-one" id="boxone"><div class="box-two"><a style="cursor: url(cursors/link.cur),auto;" class="right-a" href="https://inis.cn/">借鉴左栏样式</a></div></div>
+						</li>
+						<li>
+							<div class="box-one"><a style="cursor: url(cursors/link.cur),auto;" class="right-a" href="https://www.tencent.com/">借鉴部分布局</a><div id="boxtwo" class="box-two"></div></div>
+						</li>
+						<li>
+							<div class="box-one" id="boxthree"><div class="box-two"><a style="cursor: url(cursors/link.cur),auto;" class="right-a" href="https://www.bytedance.com/">借鉴块状设计</a></div></div>
+						</li>
+						<li>
+						<div class="box-one lastbox" ><a style="cursor: url(cursors/link.cur),auto;" class="right-a" href="http://typecho.org/">借鉴中心模块</a><div id="boxfour" class="box-two"></div></div>
+						</li>
+					</ul>
+					<!-- 右侧蓝白导航结束 -->
+					<span id="copy">©2021 Copyright</span><a style="cursor: url(cursors/link.cur),auto;" id="blog" target="myIfeame" href="https://blog.janyork.com">JanYork</a>
+				</div>
+				<!-- 网页右侧浮栏结束 -->
+				
+			</div>
+			<!-- 网页主体部分结束 -->
+			<div id="top-grrk"></div>
+		</div>
+
+		
+		<!-- 引入JS文件夹JavaScript弹窗文件 -->
+		<script src="js/playWindow.js" type="text/javascript" charset="utf-8"></script>
+		<!-- JavaScript弹窗结束 -->
+		
+		<!-- 鼠标右键自定义盒子开始 -->
+		<div class="usercm" style="left: 199px; top: 5px; display: none;">
+		    <ul>
+		        <li><a style="cursor: url(cursors/link.cur),auto;" class="mouse-a" href="#"><i class="fa fa-home fa-fw"></i><span>首页</span></a></li>
+		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:void(0);" onclick="getSelect();"><i class="fa fa-copy fa-fw"></i><span>复制</span></a></li>
+		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:void(0);" onclick="baiduSearch();"><i class="fa fa-search fa-fw"></i><span>搜索</span></a></li>
+		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:history.go(1);"><i class="fa fa-arrow-right fa-fw"></i><span>前进</span></a></li>
+		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:history.go(-1);"><i class="fa fa-arrow-left fa-fw"></i><span>后退</span></a></li>
+		        <li style="border-bottom:1px solid gray"><a style="cursor: url(cursors/link.cur),auto;" href="javascript:window.location.reload();"><i class="fa fa-refresh fa-fw"></i><span>重载</span></a></li>
+		        <li><a style="cursor: url(cursors/link.cur),auto;" href="https://blog.csdn.net/qq_60750453" target="myIfeame" ><i class="fa fa-meh-o fa-fw"></i><span>技术文章</span></a></li>  
+		        <li><a style="cursor: url(cursors/link.cur),auto;" class="mouse-b" href="letter.html" target="myIfeame" ><i class="fa fa-pencil-square-o fa-fw"></i><span>官方说明</span></a></li>
+		    </ul>
+		</div>
+		<!-- 鼠标右键自定义盒子结束 -->
+		
+		<div id="img-bigbox" style="cursor: url(cursors/normal.cur),auto;">
+			<div id="one-container">
+				<div id="three-container"></div>	
+			</div>
+			
+			<div id="imgbox" style="cursor: url(cursors/normal.cur),auto;">
+					<!--/*外层最大容器*/-->
+					<div class="wrap">
+					<!--/*包裹所有元素的容器*/-->
+					<div class="cube">
+						<!--前面图片 -->
+						<div class="out_front">
+							<img src="img/imgbox/java-logo.png"  class="pic"/>
+						</div>
+						<!--后面图片 -->
+						<div class="out_back">
+							<img src="img/imgbox/542135.jpg"  class="pic"/>
+						</div>
+						<!--左图片 -->
+						<div class="out_left">
+							<img src="img/imgbox/7-200525101140K8.png"  class="pic"/>
+						</div>
+						<div class="out_right">
+							<img src="img/imgbox/QQ截图20211128211812.png"  class="pic"/>
+						</div>
+						<div class="out_top">
+							<img src="img/imgbox/R-C.png"  class="pic"/>
+						</div>
+						<div class="out_bottom">
+							<img src="img/imgbox/v2-e11c2220bc3fcb328ce604c1441e8e5a_1440w.jpg"  class="pic"/>
+						</div>
+						<!--小正方体 --> 
+						<span class="in_front">
+							<img src="img/logo/Logos.png" class="in_pic" />
+						</span>
+						<span class="in_back">
+						     <img src="img/imgbox/QQ截图20211128220835.png" class="in_pic" />
+						</span>
+						<span class="in_left">
+							<img src="img/imgbox/QQ截图20211128221228.png" class="in_pic" />
+						</span>
+						<span class="in_right">
+							<img src="./img/imgbox/QQ截图20211128220835.png" class="in_pic" />
+						</span>
+						<span class="in_top">
+							<img src="./img/imgbox/QQ截图20211128220934.png" class="in_pic" />
+						</span>
+						<span class="in_bottom">
+							<img src="./img/ico/system.gif" class="in_pic" />
+						</span>
+					</div>
+					</div>
+			</div>
+				<!-- 第二页面左侧伸缩栏开始 -->
+				<ul id="accordion" class="accordion">
+					<li>
+						<div class="link"><h3>开发方式</h3></div>
+					</li>
+					<li>
+						<div class="link">开发语言</div>
+						<ul class="submenu">
+
+							<li><p>HTML5+CSS3+Javascript</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">开发目的</div>
+						<ul class="submenu">
+							<li><p>轻量无后端团队主页</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">布局方式</div>
+						<ul class="submenu">
+							<li><p>行内块+少量定位</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">开源协议</div>
+						<ul class="submenu">
+							<li><a href="GPL.html"><p>自觉遵守GNUAffero通公共许可证开源</p></a></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">背景效果</div>
+						<ul class="submenu">
+							<li><p>JavaScript代码实现，文件名b9.js</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">弹窗效果</div>
+						<ul class="submenu">
+							<li>
+								<p>大佬的Js外部库</p>
+								<p>与本地index.html 164-166行代码</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">logo特效</div>
+						<ul class="submenu">
+							<li><p>CSS3关键帧旋转动画</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">呼吸光环</div>
+						<ul class="submenu">
+							<li><p>CSS关键帧+盒子阴影实现</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">动态猫咪</div>
+						<ul class="submenu">
+							<li>
+								<p>引入外部库的live2D库</p>
+								<p>以及本地live2D.js文件</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">鼠标效果</div>
+						<ul class="submenu">
+							<li>
+								<p>鼠标点击效果来自Mouse.js文件</p>
+								<p>鼠标右键效果来自mouseright.js与CSS效果</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">图标来源</div>
+						<ul class="submenu">
+							<li><p>图标来源与阿里巴巴开源图标库</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">伸缩侧栏</div>
+						<ul class="submenu">
+							<li><p>使用Jquery库与本地Js实现</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">旋转图片</div>
+						<ul class="submenu">
+							<li><a href="imgbook.html"><p>CSS3的3D效果与动画共同实现</p></a></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">画布效果</div>
+						<ul class="submenu">
+							<li>
+								<p>画布效果是指底部页面图片切换的炫酷特效</p>
+								<p>来自国外论坛的大佬的5个Js库+本地imgeffect.js文件</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">随机壁纸</div>
+						<ul class="submenu">
+							<li><a href="img.html"><p>随机壁纸效果源于一位博客系统大佬的PHP写的随机壁纸API</p></a></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">信封效果</div>
+						<ul class="submenu">
+							<li><a href="letter.html"><p>信封效果为自写效果，文件为letter.html文件，CSS效果在letter.css文件</p></a></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">弹窗提醒</div>
+						<ul class="submenu">
+							<li><p>弹窗提醒为简单的JavaScript代码，在index.js文件</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">内嵌主体</div>
+						<ul class="submenu">
+							<li><p>网页中间的主体部分源于我的一个简单想法，采用iframe标签实现效果</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">滑条样式</div>
+						<ul class="submenu">
+							<li><p>滑动条颜色与宽使用CSS3修改，样式文件为flexible.css文件</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">返回顶部</div>
+						<ul class="submenu">
+							<li>
+								<p>动画效果由CSS3的3D实现</p>
+								<p>返回底部效果由JavaScript代码实现，Js代码在index.js文件里面</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="link">了解更多</div>
+						<ul class="submenu">
+							<li><p>了解更多请在第一页面侧边栏进入开发文档来详细了解</p></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- 第二页面左侧伸缩栏结束 -->
+				
+				<!-- 第二页面右侧伸缩栏开始 -->
+				<ul id="accordionTwo" class="accordion" >
+					<li>
+						<div class="link"><h3><p class="accp">项目缺陷</p></h3></div>
+					</li>
+					<li>
+						<div class="link"><p class="accp">布局缺陷</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>在只使用行内块布局与定位布局的情况下，页面无法像弹性布局与响应式布局一样兼容移动端与<1400像素的设备，有能力可自写响应式或者弹性布局</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">兼容问题</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>测试使用的webkit内核，目前系统不兼容IE浏览器与部分低版本浏览器</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">音乐歌词</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>对于我们引入的外部音乐播放器，我们无法把控歌词的固定位置，我们会尽快优化</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">弹窗问题</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>对于页面的每次进入弹出窗口，我们会尽快优化此项，如果有能力，可以删除原Js弹窗代码，自己优化弹窗或关闭弹窗</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">伸缩侧栏</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>伸缩侧栏在浏览器布局放大或缩小后，存在自动兼容，这样会导致缩小页面时，伸缩栏高度覆盖底部卷轴，我们尝试做出更改或者优化</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">伸缩右栏</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>为了满足侧栏对称性，我们使用了文字右对齐，但是这也存在了缺陷，在>1行的文字时会出现视觉落差感</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">底部文字</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>关于底部备案号与开源协议，均不可删除，你可通过CSS将其优化或者隐藏起来</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">页面更改</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>很抱歉，我们没有后台系统，如果需要更改关键词或者其他内容，需要根据开发文档直接修改源代码</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">外部效果</p></div>
+						<ul class="submenu submenuTwo">
+							<li>
+								<p>此页面引入了大部分外部效果，需要网络支持或首次加载</p>
+								<p>许多JavaScript外部库并没有提供CDN加速，渲染可能存在超时</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">代码压缩</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>为了方便用户更改，我们选择不压缩代码，每个关键点都存在注释，看代码时提供方便</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">规范问题</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>因为是我们团队写的第一个前端页面，所以代码并没有很大的规范程度，还请理解</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">内联框架</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>我们的主题中心采用内联框架用以方便点击超链接，如果需要将超链接在中心打开，不要忘了打开位置为target="myIfeame"</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">引擎优化</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>本页面没有做太多SEO处理，比如左侧链接栏，我们暂时没有进行优化</p></li>
+						</ul>
+					</li>
+					<li>
+						<div class="link"><p class="accp">了解更多</p></div>
+						<ul class="submenu submenuTwo">
+							<li><p>了解更多请在第一页面侧边栏进入开发文档来详细了解</p></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- 第二页面右侧伸缩栏结束 -->
+		</div>
+		
+	<footer style="cursor: url(cursors/normal.cur),auto;">
+		   <!-- 返回顶部按钮浮现开始 -->
+		   <a href="javascript:;" class="formtop"></a>
+		   <!-- 返回顶部按钮浮现结束 -->
+		   
+		   <!-- 底部播放器盒子开始 -->
+		   <div id="aplayer" class="aplayer" data-order="random" data-id="20173709" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-volume="0.8"></div>
+		   <!-- 底部播放器盒子结束 -->
+		   
+		   <!-- 底部主体开始 -->
+		   <div class="bottom">
+			<p class="flip"><img src="img/font.png" height="35px" ></p>   
+		   <div class="panel">
+			   <h3>鸣谢名单</h3>
+			   <div id="p_box">
+				   <div class="thankBox">
+					<p class="p_boxbaby pppo"><a href="https://inis.cn/">inis系统开发者</a></p>
+					<p class="p_boxbaby pppt"><a href="https://www.ihewro.com/">handsome主题</a></p></div>
+				   <div class="thankBox">
+					<p class="p_boxbaby pppo"><a href="mailto:inis.cc@qq.com">提供API:inis.cc@qq.com</a></p>
+					<p class="p_boxbaby pppt"><a href="mailto:cj1576922106@qq.com">提供帮助:1576922106</a></p>   
+				   </div>
+				   <div class="thankBox">
+					<p class="p_boxbaby pppo"><a href="https://www.iconfont.cn/">提供图标:iconfont</a></p>
+					<p class="p_boxbaby pppt"><a href="https://racns.com/">提供背景:Js背景效果</a></p>   
+				   </div>
+			   </div>
+		   </div>
+		   <p class="juan"></p>
+		   </div>
+		   <!-- 底部主体结束 -->
+		   <div class="last">
+				<p><span><a href="https://beian.miit.gov.cn/#/Integrated/index">湘 ICP 备 20210916008889 号</a></span></p>
+				<p><span><a href="GPL.html">GNU&nbsp&nbspAffero通公共许可证开源</a></span></p>
+				<p><span><a href="mailto:747945307@qq.com">收费或未遵守开源协议举报邮箱</a></span></p>
+		   </div>
+	</footer>
+	</body>
+</html>

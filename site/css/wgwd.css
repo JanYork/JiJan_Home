@@ -1,0 +1,180 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+header ul li {
+	font-size: 12px;
+	margin-left: 87px;
+	display: inline-block;
+	list-style: none;
+}
+
+header ul li:nth-child(7) {
+	line-height: 30px;
+	text-align: center;
+	width: 100px;
+	height: 30px;
+}
+
+.head ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.head ul li a:hover {
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+.head div {
+	display: inline-block;
+}
+
+header .head {
+	position: relative;
+	top: -350px;
+}
+
+header ul {
+	position: relative;
+	top: 8px;
+}
+
+section {
+	margin-top: -100px;
+}
+
+.section1 div {
+	display: inline-block;
+	width: 170px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50px;
+	text-align: center;
+	border: 1px #00BFFF solid;
+}
+
+.last1 {
+	background: #65BFFF;
+}
+
+.section1 img {
+	width: 600px;
+	position: relative;
+	top: 20px;
+}
+
+.section2 {
+	margin: 0 auto;
+	width: 1280px;
+}
+
+.zsm {
+	border: #000000 0px solid;
+	width: 1280px;
+	margin: 0px auto;
+}
+
+#zsm {
+	border: #000000 0px solid;
+	width: 1280px;
+	margin: 0px auto;
+}
+
+.a {
+	border: 1px #606266 solid;
+	height: 400px;
+	width: 1280px;
+
+}
+
+.b {
+	border: solid 1px;
+	height: 100px;
+	background-color: #6FB1DC;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+}
+
+.c {
+	border: solid 1px;
+	height: 80px;
+	width: 200px;
+	text-align: center;
+	line-height: 80px;
+	background-color: #D9E3EF;
+	color: #666666;
+	margin-left: 15px;
+}
+
+.d {
+	border: solid 1px;
+	height: 80px;
+	width: 200px;
+	text-align: center;
+	line-height: 80px;
+	background-color: #D9E3EF;
+	color: #666666;
+	margin-left: 300px;
+	margin-top: -82px;
+}
+
+.e {
+	border: solid 1px;
+	height: 80px;
+	width: 200px;
+	text-align: center;
+	line-height: 80px;
+	background-color: #D9E3EF;
+	color: #666666;
+	margin-left: 588px;
+	margin-top: -82px;
+}
+
+.f {
+	border: solid 1px;
+	height: 80px;
+	width: 200px;
+	text-align: center;
+	line-height: 80px;
+	background-color: #D9E3EF;
+	color: #666666;
+	margin-left: 880px;
+	margin-top: -82px;
+}
+
+.zhengche {
+	width: 1090px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.zsms {
+	text-align: center;
+}
+
+footer {
+	margin: 0 auto;
+}
+
+footer div {
+	width: 1280px;
+	margin: 0 auto;
+	margin-top: 20px;
+	color: #fff;
+	height: 60px;
+	background-color: #0B1631;
+	text-align: center;
+	line-height: 60px;
+}
+
+

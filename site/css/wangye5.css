@@ -1,0 +1,60 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+section{
+	width:1280px;
+	margin:0px auto;
+}
+li{
+	list-style:none;
+}
+.fa{
+	position: fixed;
+	bottom: 50px;
+	left: 1450px;
+	width: 50px;
+}
+.winga img{
+	width:1280px;
+}
+.wing{
+	border:1px solid #A6A4A4;
+	margin-top:20px;
+}
+.wing:hover{
+	font-size:25px;
+}
+.wing div{
+	width:500px;
+	display:inline-block;
+	margin:0px auto;
+	
+}
+.devil{
+	font-weight:bold;
+	font-size:15px;
+}
+.art1{
+	line-height:25px;
+}
+img,.art1{
+	vertical-align:middle;
+}
+ul{
+	padding-top:20px;
+}
+.yang{
+	color:#888888;
+}
+.artys{
+	color:#91CB06;
+}
+footer div{
+	margin-top: 30px;
+	height: 60px;
+	line-height: 60px;
+	color:#fff;
+	text-align: center;
+	background-color:#0B1631 ;
+}

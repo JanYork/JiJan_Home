@@ -1,0 +1,74 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+footer{
+	background-color:#F8F8F8;
+}
+.fater{
+	width:1280px;
+	height:250px;
+	line-height:30px;
+	margin:0px auto;
+	text-align: center;
+	position:relative;
+	top:51px;
+}
+.are-img,.baozhang{
+	display:inline-block;
+	vertical-align: middle;
+	margin-left:5px;
+	padding-left:5px;
+}
+.jeitu,.youxiao{
+	display:inline-block;
+	vertical-align: middle;
+	margin-left:5px;
+	padding-left:5px;
+}
+.png,.fangxing{
+	display:inline-block;
+	vertical-align: middle;
+	margin-left:5px;
+	padding-left:5px;
+}
+.img,.zhanghao{
+	display:inline-block;
+	vertical-align: middle;
+	margin-left:5px;
+	padding-left:5px;
+}
+.writing1{
+	font-size:20px;
+	font-weight:bold;
+}
+.writing1:hover{
+	color:deepskyblue;
+}
+.box{
+	display:inline-block;
+	text-align: center;
+	padding-left:25px;
+	font-size:17px;
+}
+.box a{
+	text-decoration: none;
+	color:black;
+	font-weight:bold ;
+}
+.Son{
+	margin-top:25px;
+}
+.writing2{
+	padding-left:30px;
+}
+.box a:hover{
+	color:deepskyblue;	
+}
+.Alt{
+	text-decoration: none;
+	color:black;
+}
+.box-one{
+	margin-top:25px;
+}

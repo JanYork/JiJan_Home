@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 1280px;
+	height: 100px;
+	border: 1px red solid;
+}
+.guangjia,.daohang{
+	display: inline-block;
+	vertical-align: middle;
+}
+header p{
+	width: 70px;
+	height: 35px;
+	background-color: #1277F3;
+}
+header li{
+	display: inline-block;
+}
+header ul a{
+	text-decoration: none;
+	color: #000000;
+	padding-left:50px;
+}
+header ul a:hover{
+	text-decoration: underline;
+	color: #1277F3;
+}
+.daohang{
+	padding-left:500px;
+}
+header p a{
+	text-decoration: none;
+}
+header p{
+	margin-left:1150px;
+	margin-top: -60px;
+	width:80px;
+	height:30px;
+	line-height:30px;
+	background-color: #3A8EE6;
+}
+
+<img src="img/-277303209_-467267972_2049385564.png" width="1280px"/>
+				<div class="box7one"><h3>空中药房</h3>
+					<p>零库存零投入，搭建高品质中药房，每年至少省12万</p>
+					<img src="img/EGAD_T2A%5DBSE7_7%7BFH%7D633I.png" width="450px"/>
+				</div>
+				<div>
+					<h3>库存管理</h3>
+					<p>进销存全流程覆盖;智能库存预警、效期预警、采购建议，库存管理轻松省心</p>
+					<img src="img/P13FBA2VI~49Z%7BQK)VD3@_1.png" width="450px"/>
+				</div>

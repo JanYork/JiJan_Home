@@ -1,0 +1,72 @@
+	body{
+		cursor: url(cursors/normal.cur),auto;
+	}
+	#time{
+		width: 300px;
+		margin: 0 auto;
+	}
+		 ul,li {
+		            margin: 0;
+		            padding: 0;
+		        }
+		        .layui-timeline-item {
+		            position: relative;
+		            padding-bottom: 20px;
+		        }
+		 
+		        li {
+		            list-style: none;
+		        }
+				/* 时间轴贯穿线效果 */
+		        .layui-timeline-item::before {
+		            content: '';
+		            position: absolute;
+		            z-index: 0;
+		            width: 1px;
+		            height: 120px;
+					background-color: #569fff;
+					top: 20px;
+		        }
+				/* 圈圈定位 */
+		        .layui-timeline-axis {
+		            position: absolute;
+		            left: -6.2px;
+		            z-index: 10;
+		            background-color: #fff;
+		            border-radius: 50%;
+		            text-align: center;
+		            cursor: url(cursors/link.cur),auto;
+		        }
+				/* 圈圈鼠标悬浮效果 */
+				.layui-timeline-axis:hover{
+				   background-color: #727CF5;
+				}
+		        .layui-timeline-content {
+		            padding-left: 25px;
+		        }
+		 
+		        .layui-text {
+		            line-height: 22px;
+		            font-size: 14px;
+		            color: #666;
+		        }
+		 
+		        .layui-timeline-title {
+		            position: relative;
+		            margin-bottom: 10px;
+		        }
+				/* 圈圈大小 */
+		        .circle {
+		            width: 7px;
+		            height: 7px;
+		            border: 3px solid #569fff;
+		        }
+				/* 时间轴左侧时间 */
+		        .time-first {
+		            position: absolute;
+		            left: -60px;
+		        }
+				/* 固定右侧内容高度 */
+				.layui-timeline-content{
+					height: 120px;
+				}
