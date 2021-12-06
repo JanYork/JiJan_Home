@@ -1,2 +1,2 @@
 # Jan_Home
- 轻量级团队主页
+ HTML5和CSS3以及少量JavaScript代码构成的轻量级团队主页
