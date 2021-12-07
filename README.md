@@ -34,3 +34,4 @@
 
 # 说明文档
 如果想详细了解这个系统，并且修改它，可进入开发文档查看
+开发文档地址：https://blog.janyork.com/index.php/archives/21/
