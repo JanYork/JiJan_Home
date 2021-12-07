@@ -62,7 +62,7 @@
 		<link rel="stylesheet" type="text/css" href="css/aplayer.css"/>
 		
 		<!-- 页面音乐外部播放器Js库引入开始 -->
-		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<!--此Js库貌似与鼠标右键存在冲突 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
 		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
 		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -109,7 +109,7 @@
 				<aside>
 					<nav class="left_nav">
 						<a style="cursor: url(cursors/link.cur),auto;" href="https://blog.janyork.com/index.php/archives/21/">开发文档</a>
-						<a style="cursor: url(cursors/link.cur),auto;" href="https://github.com/JanYork" target="_blank">Github</a>
+						<a style="cursor: url(cursors/link.cur),auto;" href="https://github.com/JanYork/JiJan_Home" target="_blank">Github</a>
 						<a style="cursor: url(cursors/link.cur),auto;" href="https://www.kuaishou.com/" target="myIfeame">影视站点</a>
 						<a style="cursor: url(cursors/link.cur),auto;" href="mailto:747945307@qq.com">邮箱联系</a>
 						<a style="cursor: url(cursors/link.cur),auto;" href="tongzhi.html" target="myIfeame">官方消息</a>
@@ -126,7 +126,7 @@
 			<div id="center">
 				<!-- 网页中心部分开始 -->
 				<div id="docbox">
-					<iframe src="site/baiduhome.html" scrolling : auto  height="100%" name="myIfeame" width="1026px" ></iframe>
+					<iframe src="https://blog.janyork.com" scrolling : auto  height="100%" name="myIfeame" width="1026px" ></iframe>
 				</div>
 					
 				<!-- 网页中心部分结束 -->
@@ -142,7 +142,7 @@
 						</ul>
 						<ul>
 							<li><input style="cursor: url(cursors/link.cur),auto;"  id="contact-a4" onclick="prompt()" type="image" src="img/ico/iconfont-info.png" /></li>
-							<li><a style="cursor: url(cursors/link.cur),auto;"  id="contact-a5" href="https://github.com/JanYork/jan-home" target="_blank"><img src="img/ico/github-fill.png" ></a></li>
+							<li><a style="cursor: url(cursors/link.cur),auto;"  id="contact-a5" href="https://github.com/JanYork" target="_blank"><img src="img/ico/github-fill.png" ></a></li>
 							<li><a style="cursor: url(cursors/link.cur),auto;"  id="contact-a6" href="letter.html" target="myIfeame"><img src="img/ico/fuwu.png" ></a></li>
 						</ul>
 					</div>
@@ -177,21 +177,6 @@
 		<!-- 引入JS文件夹JavaScript弹窗文件 -->
 		<script src="js/playWindow.js" type="text/javascript" charset="utf-8"></script>
 		<!-- JavaScript弹窗结束 -->
-		
-		<!-- 鼠标右键自定义盒子开始 -->
-		<div class="usercm" style="left: 199px; top: 5px; display: none;">
-		    <ul>
-		        <li><a style="cursor: url(cursors/link.cur),auto;" class="mouse-a" href="#"><i class="fa fa-home fa-fw"></i><span>首页</span></a></li>
-		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:void(0);" onclick="getSelect();"><i class="fa fa-copy fa-fw"></i><span>复制</span></a></li>
-		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:void(0);" onclick="baiduSearch();"><i class="fa fa-search fa-fw"></i><span>搜索</span></a></li>
-		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:history.go(1);"><i class="fa fa-arrow-right fa-fw"></i><span>前进</span></a></li>
-		        <li><a style="cursor: url(cursors/link.cur),auto;" href="javascript:history.go(-1);"><i class="fa fa-arrow-left fa-fw"></i><span>后退</span></a></li>
-		        <li style="border-bottom:1px solid gray"><a style="cursor: url(cursors/link.cur),auto;" href="javascript:window.location.reload();"><i class="fa fa-refresh fa-fw"></i><span>重载</span></a></li>
-		        <li><a style="cursor: url(cursors/link.cur),auto;" href="https://blog.csdn.net/qq_60750453" target="myIfeame" ><i class="fa fa-meh-o fa-fw"></i><span>技术文章</span></a></li>  
-		        <li><a style="cursor: url(cursors/link.cur),auto;" class="mouse-b" href="letter.html" target="myIfeame" ><i class="fa fa-pencil-square-o fa-fw"></i><span>官方说明</span></a></li>
-		    </ul>
-		</div>
-		<!-- 鼠标右键自定义盒子结束 -->
 		
 		<div id="img-bigbox" style="cursor: url(cursors/normal.cur),auto;">
 			<div id="one-container">
@@ -528,6 +513,21 @@
 				<p><span><a href="GPL.html">GNU&nbsp&nbspAffero通公共许可证开源</a></span></p>
 				<p><span><a href="mailto:747945307@qq.com">收费或未遵守开源协议举报邮箱</a></span></p>
 		   </div>
+		   
+		   <!-- 鼠标右键自定义盒子开始 -->
+		   <div class="usercm" style="left: 199px; top: 5px; display: none;">
+		       <ul>
+		           <li><a class="mouse-a" href="#"><i class="fa fa-home fa-fw"></i><span>首页</span></a></li>
+		           <li><a href="javascript:void(0);" onclick="getSelect();"><i class="fa fa-copy fa-fw"></i><span>复制</span></a></li>
+		           <li><a href="javascript:void(0);" onclick="baiduSearch();"><i class="fa fa-search fa-fw"></i><span>搜索</span></a></li>
+		           <li><a href="javascript:history.go(1);"><i class="fa fa-arrow-right fa-fw"></i><span>前进</span></a></li>
+		           <li><a href="javascript:history.go(-1);"><i class="fa fa-arrow-left fa-fw"></i><span>后退</span></a></li>
+		           <li style="border-bottom:1px solid gray"><a href="javascript:window.location.reload();"><i class="fa fa-refresh fa-fw"></i><span>重载</span></a></li>
+		           <li><a href="https://blog.janyork.com/index.php/archives/21/" target="myIfeame" ><i class="fa fa-meh-o fa-fw"></i><span>开发文档</span></a></li>  
+		           <li><a class="mouse-b" href="letter.html" target="myIfeame" ><i class="fa fa-pencil-square-o fa-fw"></i><span>官方说明</span></a></li>
+		       </ul>
+		   </div>
+		   <!-- 鼠标右键自定义盒子结束 -->
 	</footer>
 	</body>
 </html>
